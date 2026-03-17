@@ -1597,13 +1597,28 @@ import Footer from "../components/Footer.astro";
                     placeholder="Company or practice name"
                   />
                 </div>
+                <div class="form-field">
+                  <label for="consultation-service-area">Service Area</label>
+                  <select
+                    id="consultation-service-area"
+                    name="service_area"
+                    required
+                  >
+                    <option value="">Select a service area</option>
+                    <option value="Philadelphia">Philadelphia</option>
+                    <option value="Montgomery County">Montgomery County</option>
+                    <option value="Delaware County">Delaware County</option>
+                    <option value="South Jersey">South Jersey</option>
+                    <option value="Not sure">Not sure</option>
+                  </select>
+                </div>
                 <div class="form-field" style="grid-column: 1 / -1">
                   <label for="consultation-message">Message</label>
                   <textarea
                     id="consultation-message"
                     name="message"
                     rows="4"
-                    placeholder="Tell us about your courier or route needs."
+                    placeholder="Include your pickup locations, how often you need service, and any required delivery time windows."
                   ></textarea>
                 </div>
               </div>
