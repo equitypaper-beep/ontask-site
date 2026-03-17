@@ -1,3 +1,6 @@
+---
+import Footer from "../components/Footer.astro";
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -215,7 +218,7 @@
       .hero {
         padding-top: 128px;
         padding-bottom: 104px;
-        background: transparent;
+        background: linear-gradient(to bottom, #f8fafc, #ffffff);
       }
 
       .hero-grid {
@@ -471,7 +474,7 @@
       }
 
       .section--muted {
-        background: #f7f8fc;
+        background: #f8fafc;
       }
 
       .section-header {
@@ -1362,7 +1365,7 @@
 
         <!-- Who we work with -->
         <section
-          class="section"
+          class="section section--muted"
           aria-labelledby="clients-title"
         >
           <div class="section-header">
@@ -1447,7 +1450,7 @@
         <!-- Service area -->
         <section
           id="coverage"
-          class="section"
+          class="section section--muted"
           aria-labelledby="coverage-title"
         >
           <div class="coverage">
@@ -1541,14 +1544,14 @@
             <form
               id="consultation-form"
               class="form-card"
-              name="route-consultation"
+              name="consultation"
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
               action="/thank-you/"
             >
-              <div class="form-title">Request a route consultation</div>
-              <input type="hidden" name="form-name" value="route-consultation" />
+              <div class="form-title">Request a consultation</div>
+              <input type="hidden" name="form-name" value="consultation" />
               <div style="display:none">
                 <label>
                   Do not fill this out if you are human
@@ -1557,128 +1560,72 @@
               </div>
               <div class="form-grid">
                 <div class="form-field">
-                  <label for="practice-name">Practice or organization</label>
+                  <label for="consultation-name">Name</label>
                   <input
-                    id="practice-name"
-                    name="Practice or organization"
+                    id="consultation-name"
+                    name="name"
                     type="text"
                     required
-                    placeholder="Example Medical Group"
+                    placeholder="Your name"
                   />
                 </div>
                 <div class="form-field">
-                  <label for="contact-name">Primary contact</label>
+                  <label for="consultation-email">Email</label>
                   <input
-                    id="contact-name"
-                    name="Primary contact"
-                    type="text"
-                    required
-                    placeholder="Name"
-                  />
-                </div>
-                <div class="form-field">
-                  <label for="email">Work email</label>
-                  <input
-                    id="email"
-                    name="Work email"
+                    id="consultation-email"
+                    name="email"
                     type="email"
                     required
-                    placeholder="name@practice.com"
+                    placeholder="name@example.com"
                   />
                 </div>
                 <div class="form-field">
-                  <label for="county">Primary county</label>
-                  <select id="county" name="Primary county" required>
-                    <option value="">Select county</option>
-                    <option>Philadelphia</option>
-                    <option>Montgomery County</option>
-                    <option>Delaware County</option>
-                    <option>South Jersey</option>
-                    <option>Other (nearby)</option>
-                  </select>
+                  <label for="consultation-phone">Phone</label>
+                  <input
+                    id="consultation-phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="(555) 000-0000"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="consultation-organization">Organization</label>
+                  <input
+                    id="consultation-organization"
+                    name="organization"
+                    type="text"
+                    placeholder="Company or practice name"
+                  />
                 </div>
                 <div class="form-field" style="grid-column: 1 / -1">
-                  <label for="details">
-                    Pickup details (locations, frequency, documents and materials)
-                  </label>
+                  <label for="consultation-message">Message</label>
                   <textarea
-                    id="details"
-                    name="Pickup needs"
-                    placeholder="Example: Daily pickups from three offices in Center City and University City with a twice-weekly inter-office document run."
+                    id="consultation-message"
+                    name="message"
+                    rows="4"
+                    placeholder="Tell us about your courier or route needs."
                   ></textarea>
                 </div>
               </div>
               <div class="form-footer">
                 <p class="form-success" aria-live="polite" hidden>
-                  Your consultation request has been received. Our team will
-                  review your route needs and follow up shortly.
+                  Your consultation request has been received. We will follow up
+                  shortly.
                 </p>
                 <p class="form-note">
-                  Submitted details are used only to review route fit and
-                  respond to your inquiry.
-                </p>
-                <p class="form-note">
-                  Submitting this form does not create a service agreement. Route
-                  availability and service scheduling must be reviewed before
-                  confirmation.
+                  Submitted details are used only to respond to your inquiry.
                 </p>
                 <button type="submit" class="btn-form">
-                  Submit request
+                  Request Consultation
                 </button>
-                <p class="form-note">
-                  Submitting a consultation request does not create a service
-                  agreement. Route availability and scheduling are confirmed
-                  after review.
-                </p>
               </div>
             </form>
           </div>
         </section>
 
-        <footer class="footer">
-          <div class="footer-inner">
-            <div class="footer-block">
-              <div class="footer-heading">OnTask Logistics LLC</div>
-              <div class="footer-text">Philadelphia, Pennsylvania</div>
-              <div class="footer-text">Operations</div>
-              <div class="footer-text">
-                <a href="mailto:operations@ontasklogistics.com" class="footer-link"
-                  >operations@ontasklogistics.com</a
-                >
-              </div>
-              <div class="footer-text">267 369 2332</div>
-              <div class="footer-text">
-                Verified. Documented. Delivered.
-              </div>
-              <div class="footer-text">
-                Courier routes serving the Philadelphia region.
-              </div>
-            </div>
-            <div class="footer-block">
-              <div class="footer-heading">Service Area</div>
-              <div class="footer-text">Philadelphia</div>
-              <div class="footer-text">Montgomery County</div>
-              <div class="footer-text">Delaware County</div>
-              <div class="footer-text">Limited South Jersey coverage</div>
-            </div>
-            <div class="footer-block">
-              <div class="footer-heading">Links</div>
-              <div class="footer-links">
-                <a class="footer-link" href="/privacy/">Privacy Policy</a>
-                <a class="footer-link" href="/terms/">Terms of Use</a>
-              </div>
-            </div>
-            <div class="footer-block" style="flex-basis: 100%; max-width: 640px">
-              <div class="footer-text">
-                Submitting a consultation request does not guarantee service
-                availability. Coverage and scheduling depend on route structure
-                and operational fit.
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </main>
+    <Footer />
 
     <script>
       // Mobile navigation toggle
