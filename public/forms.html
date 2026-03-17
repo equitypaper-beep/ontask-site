@@ -1,3 +1,28 @@
-<form name="consultation" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="consultation" />
-  </form>
+<form
+  name="consultation"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="consultation" />
+  <div style="display:none">
+    <label>
+      Do not fill this out if you are human
+      <input name="bot-field" />
+    </label>
+  </div>
+  <p><input type="text" name="name" /></p>
+  <p><input type="email" name="email" /></p>
+  <p><input type="tel" name="phone" /></p>
+  <p><input type="text" name="organization" /></p>
+  <p>
+    <select name="service_area">
+      <option value="Philadelphia">Philadelphia</option>
+      <option value="Montgomery County">Montgomery County</option>
+      <option value="Delaware County">Delaware County</option>
+      <option value="South Jersey">South Jersey</option>
+      <option value="Not sure">Not sure</option>
+    </select>
+  </p>
+  <p><textarea name="message"></textarea></p>
+</form>
