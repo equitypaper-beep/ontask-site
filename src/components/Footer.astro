@@ -26,7 +26,7 @@
       </div>
     </div>
     <p class="site-footer-tagline">
-      Structured Courier Routes for Philadelphia Practices
+      Structured Courier Routes for Philadelphia Offices
     </p>
   </div>
 </footer>
@@ -34,7 +34,7 @@
 <style>
   .site-footer {
     border-top: 1px solid var(--border-subtle, #e1e5f0);
-    padding: 32px 20px 32px;
+    padding: 32px 32px 32px;
     margin-top: 48px;
     background: transparent;
   }
@@ -111,6 +111,13 @@
   @media (min-width: 640px) {
     .site-footer-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 720px) {
+    .site-footer {
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 </style>

@@ -279,6 +279,16 @@ import Footer from "../components/Footer.astro";
         line-height: 1.76;
       }
 
+      .hero-painpoint {
+        color: var(--navy);
+        font-weight: 600;
+        font-size: 1.05rem;
+        max-width: 36rem;
+        line-height: 1.7;
+        margin-top: 8px;
+        margin-bottom: 36px;
+      }
+
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
@@ -1128,7 +1138,7 @@ import Footer from "../components/Footer.astro";
               <h1 id="hero-title" class="hero-title">
                 Courier Routes That Work the Way Your Office Does
               </h1>
-              <p class="hero-body">
+              <p class="hero-painpoint">
                 Built around your schedule, so pickups happen when expected, deliveries are documented, and your team isn’t chasing updates.
               </p>
               <p class="hero-body">
@@ -1230,8 +1240,9 @@ import Footer from "../components/Footer.astro";
               </div>
               <h3 class="process-title">Route Consultation</h3>
               <p class="process-copy">
-                We review pickup frequency, locations, and handoff procedures to
-                design a recurring pickup schedule that fits your workflow.
+                OnTask Logistics reviews pickup frequency, locations, and
+                handoff procedures to design a recurring pickup schedule that
+                fits your workflow.
               </p>
             </article>
 
@@ -1273,8 +1284,9 @@ import Footer from "../components/Footer.astro";
               Handling and Delivery Protocol
             </h2>
             <p class="section-body">
-              Every pickup follows a structured handling process designed to
-              maintain documentation, accountability, and delivery verification.
+              Every pickup and handoff is logged with timestamps and stop-level
+              verification to keep delivery records auditable from collection to
+              completion.
             </p>
           </div>
           <div
@@ -1285,32 +1297,35 @@ import Footer from "../components/Footer.astro";
               <div class="handling-icon">1</div>
               <h3 class="handling-title">Pickup Confirmation</h3>
               <p class="handling-copy">
-                Items are collected from designated staff during the assigned
-                pickup window and logged at the point of transfer.
+                Courier confirms pickup with designated staff during the
+                assigned window and records the handoff time, item type, and
+                quantity for direct handoff documentation.
               </p>
             </article>
             <article class="handling-item">
               <div class="handling-icon">2</div>
               <h3 class="handling-title">Secure Transport</h3>
               <p class="handling-copy">
-                Items move along a defined route designed to maintain
-                accountability and minimize unnecessary handling.
+                Items move in sealed totes along the assigned route to reduce
+                unnecessary transfers and maintain custody until the delivery
+                stop.
               </p>
             </article>
             <article class="handling-item">
               <div class="handling-icon">3</div>
               <h3 class="handling-title">Delivery Verification</h3>
               <p class="handling-copy">
-                Each delivery stop is completed with timestamped confirmation and
-                recipient verification when required.
+                At delivery, the courier captures timestamped confirmation and
+                signature confirmation or recipient ID when required.
               </p>
             </article>
             <article class="handling-item">
               <div class="handling-icon">4</div>
               <h3 class="handling-title">Proof of Delivery</h3>
               <p class="handling-copy">
-                Delivery completion is documented with time, location, and
-                recipient details so clients maintain a clear record.
+                Delivery completion includes pickup and delivery timestamps,
+                location, recipient details, and any exception notes for your
+                internal records.
               </p>
             </article>
           </div>
@@ -1354,6 +1369,12 @@ import Footer from "../components/Footer.astro";
                 <li class="standard-item">
                   <span class="standard-check">✓</span>
                   <span class="standard-text">
+                    Same day communication for any route exceptions or delays.
+                  </span>
+                </li>
+                <li class="standard-item">
+                  <span class="standard-check">✓</span>
+                  <span class="standard-text">
                     Service within established coverage areas
                   </span>
                 </li>
@@ -1368,17 +1389,11 @@ import Footer from "../components/Footer.astro";
             <aside class="standards-card">
               <div class="standards-card-title">Additional coverage</div>
               <p class="standards-card-body">
-                While many routes support medical offices and clinics, OnTask can also
-                support structured courier needs for other professional offices.
-                This includes document delivery, inter-office transport, and
-                other recurring movements that benefit from defined schedules
-                and documented completion.
+                One time and supplemental deliveries are available within
+                established coverage areas.
               </p>
               <p class="standards-meta">
-                Engagements are typically scoped and scheduled in advance to
-                support predictable courier routes. One-time deliveries may be
-                accommodated when they align with existing routes or operational
-                availability.
+                Contact us to confirm availability for your location.
               </p>
             </aside>
           </div>
@@ -1401,13 +1416,14 @@ import Footer from "../components/Footer.astro";
             is designed around predictable courier routes while still supporting
             occasional one-off delivery needs when required.
           </p>
-          <div class="coverage-cards-grid" aria-label="Who we work with">
+          <div class="coverage-cards-grid" aria-label="Who OnTask Logistics works with">
             <div class="coverage-card coverage-card--primary">
               <div class="coverage-card-title">Medical Practices</div>
               <div class="coverage-card-body">
                 <p>
-                  Recurring document and materials transfers for clinics and
-                  multi-location practices.
+                    Scheduled pickups of confidential patient paperwork and
+                    lab supplies, with handoffs recorded with the designated
+                    pickup and receiving contacts.
                 </p>
               </div>
             </div>
@@ -1415,8 +1431,9 @@ import Footer from "../components/Footer.astro";
               <div class="coverage-card-title">Professional Offices</div>
               <div class="coverage-card-body">
                 <p>
-                  Scheduled courier support for law firms, accounting offices,
-                  and other professional services.
+                    Scheduled delivery of legal filings, closing documents, and
+                    time-sensitive paperwork, delivered with recipient
+                    acknowledgement when required.
                 </p>
               </div>
             </div>
@@ -1424,48 +1441,24 @@ import Footer from "../components/Footer.astro";
               <div class="coverage-card-title">Multi-Location Businesses</div>
               <div class="coverage-card-body">
                 <p>
-                  Reliable internal transfers between offices that benefit from
-                  predictable courier routes.
+                    Internal transfers of supplies and documents between
+                    locations, using recurring pickup windows and consistent
+                    handoffs so workflows stay aligned across offices.
                 </p>
               </div>
             </div>
             <div class="coverage-card coverage-card--extended">
-              <div class="coverage-card-title">Administrative Teams</div>
+                <div class="coverage-card-title">Healthcare Networks</div>
               <div class="coverage-card-body">
                 <p>
-                  Organizations that need consistent document movement without
-                  managing in-house delivery.
+                    Inter-facility routing across multiple clinics and
+                    departments, using standardized pickup/drop-off
+                    checklists and receiving confirmation for internal
+                    materials.
                 </p>
               </div>
             </div>
           </div>
-        </section>
-
-        <section class="section" aria-labelledby="operations-title">
-          <div class="section-header">
-            <div class="section-eyebrow">Operating approach</div>
-            <h2 id="operations-title" class="section-title">
-              Local Courier Operations Built for Predictable Workflows
-            </h2>
-          </div>
-          <p class="coverage-body">
-            OnTask Logistics is a Philadelphia based courier service built
-            around structured, recurring delivery routes for offices and
-            professional organizations. The service is designed for teams that
-            rely on predictable document and materials movement between
-            locations but do not want to manage in-house delivery operations.
-          </p>
-          <p class="coverage-body">
-            Routes are planned with defined pickup windows, documented handoffs,
-            and consistent delivery verification. Each route is managed with
-            clear communication and a single operational point of contact so
-            your staff always knows who is responsible for the delivery process.
-          </p>
-          <p class="coverage-body">
-            This structured approach allows organizations to maintain dependable
-            logistics coverage while keeping operations simple, accountable, and
-            predictable.
-          </p>
         </section>
 
         <!-- Service area -->
@@ -1529,6 +1522,31 @@ import Footer from "../components/Footer.astro";
           </div>
         </section>
 
+        <!-- Operator accountability -->
+        <section class="section" aria-labelledby="operator-title">
+          <div class="section-header">
+            <div class="section-eyebrow">The Operator</div>
+            <h2 id="operator-title" class="section-title">
+              One Contact. Every Route. Every Time.
+            </h2>
+          </div>
+          <p class="coverage-body">
+            OnTask Logistics is owner operated. When you reach out, you&#8217;re
+            communicating directly with the person responsible for your route.
+          </p>
+          <p class="coverage-body">
+            Each route is planned, managed, and executed with direct
+            accountability. Your schedule, locations, and delivery
+            requirements are handled by the same person from start to finish,
+            not passed between dispatchers or systems. That means fewer gaps,
+            clearer communication, and consistent service built around how your
+            office operates.
+          </p>
+          <p class="coverage-body">
+            Philadelphia based. Owner operated. Accountable on every route.
+          </p>
+        </section>
+
         <!-- Final CTA -->
         <section
           id="consultation"
@@ -1556,9 +1574,9 @@ import Footer from "../components/Footer.astro";
                   Request Consultation
                 </a>
                 <p class="cta-inline-note">
-                  Share your pickup locations and frequency. We&#8217;ll review
-                  your routing needs and respond with a proposed route
-                  structure and coverage confirmation.
+                  Share your pickup locations and frequency. OnTask Logistics
+                  will review your routing needs and respond with a proposed
+                  route structure and coverage confirmation.
                 </p>
               </div>
             </div>
@@ -1644,8 +1662,8 @@ import Footer from "../components/Footer.astro";
               </div>
               <div class="form-footer">
                 <p class="form-success" aria-live="polite" hidden>
-                  Your consultation request has been received. We will follow up
-                  shortly.
+                  Your consultation request has been received. OnTask Logistics will
+                  follow up shortly.
                 </p>
                 <p class="form-note">
                   Your information is used only to respond to your request.
@@ -1654,7 +1672,7 @@ import Footer from "../components/Footer.astro";
                   Request Consultation
                 </button>
                 <p class="form-note">
-                  After you submit, our team reviews your request and follows up shortly.
+                  I&#8217;ll review your request and follow up within one business day.
                 </p>
               </div>
             </form>
