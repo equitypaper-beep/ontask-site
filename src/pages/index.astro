@@ -1551,11 +1551,9 @@ import Footer from "../components/Footer.astro";
             >
               <div class="form-title">Request a consultation</div>
               <input type="hidden" name="form-name" value="consultation" />
-              <div style="display:none">
-                <label>
-                  Do not fill this out if you are human
-                  <input name="bot-field" />
-                </label>
+              <div style="display:none;">
+                <label for="bot-field">Do not fill this out if you are human</label>
+                <input id="bot-field" name="bot-field" type="text" />
               </div>
               <div class="form-grid">
                 <div class="form-field">
