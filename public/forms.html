@@ -3,20 +3,36 @@
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
+  action="/thank-you"
 >
   <input type="hidden" name="form-name" value="consultation" />
-  <div style="display:none">
+
+  <p style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
     <label>
-      Do not fill this out if you are human
-      <input name="bot-field" />
+      Do not fill this out if you are human:
+      <input name="bot-field" tabindex="-1" autocomplete="off" />
     </label>
-  </div>
-  <p><input type="text" name="name" /></p>
-  <p><input type="email" name="email" /></p>
-  <p><input type="tel" name="phone" /></p>
-  <p><input type="text" name="organization" /></p>
+  </p>
+
   <p>
-    <select name="service_area">
+    <input type="text" name="name" required />
+  </p>
+
+  <p>
+    <input type="email" name="email" required />
+  </p>
+
+  <p>
+    <input type="tel" name="phone" />
+  </p>
+
+  <p>
+    <input type="text" name="organization" />
+  </p>
+
+  <p>
+    <select name="service_area" required>
+      <option value="">Select a service area</option>
       <option value="Philadelphia">Philadelphia</option>
       <option value="Montgomery County">Montgomery County</option>
       <option value="Delaware County">Delaware County</option>
@@ -24,5 +40,12 @@
       <option value="Not sure">Not sure</option>
     </select>
   </p>
-  <p><textarea name="message"></textarea></p>
+
+  <p>
+    <textarea name="message" required></textarea>
+  </p>
+
+  <p>
+    <button type="submit">Request Consultation</button>
+  </p>
 </form>
